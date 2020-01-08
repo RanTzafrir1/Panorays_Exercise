@@ -1,0 +1,6 @@
+Flask
+gunicorn
+requests
+lxml
+bs4
+pytest

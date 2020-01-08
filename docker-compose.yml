@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  website:
+    build: .
+    command: >
+      gunicorn -b 0.0.0.0:8002
+        --access-logfile -
+        --reload
+        "panorays.app:create_app()"
+    environment:
+      PYTHONUNBUFFERED: 'true'
+    volumes:
+      - '.:/panorays'
+    ports:
+      - '8002:8002'
