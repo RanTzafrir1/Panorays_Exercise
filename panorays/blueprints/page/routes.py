@@ -6,11 +6,10 @@ page = Blueprint('page',__name__, template_folder='templates')
 @page.route('/')
 def index():
     """
-    Render a Hello World response.
-
+    
     :return: Flask response
     """
-    return 'Hello World!'
+    return 'Welcome to Panorays'
 
 @page.route('/title', methods=['GET'])
 def getMetaData():
